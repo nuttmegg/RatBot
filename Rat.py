@@ -4,6 +4,7 @@ from discord.ext import commands
 import random
 import datetime
 time = datetime.datetime.now()
+import os
 
 client = discord.Client
 bot = commands.Bot(command_prefix = '.')
@@ -81,4 +82,4 @@ async def rat(ctx):
     await ctx.send(embed=embed)
     print(f'-command: "{bot.command_prefix}{ctx.command}" ran by {ctx.author} in the "{ctx.channel}" channel. ({time.strftime("%Y-%m-%d %H:%M")})')
 
-bot.run('ODc0MTI0NDQ4ODU5NTUzODAy.YRCZ1Q.ytXTz5Ml9LZdZoEgjJVshutoVEQ')
+bot.run(os.environ['Token'])
